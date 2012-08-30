@@ -26,9 +26,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise-encryptable',              '~> 0.1.1'
   s.add_dependency 'cancan',                          '1.6.7'
 
-  s.add_dependency 'mongo',                           '~> 1.5.2'
-  s.add_dependency 'bson_ext',                        '~> 1.5.2'
-  s.add_dependency 'mongoid',                         '~> 2.4.12'
+  s.add_dependency 'mongo',                           '~> 1.7.0'
+  s.add_dependency 'bson_ext',                        '~> 1.7.0'
+  s.add_dependency 'mongoid',                         '~> 3.0.5'
   s.add_dependency 'locomotive-mongoid-tree',         '~> 0.6.2'
   s.add_dependency 'locomotive-mongoid_migration'
 
