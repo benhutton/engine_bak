@@ -7,8 +7,8 @@ module Locomotive
 
     ## devise fields (need to be declared since 2.x) ##
     field :remember_created_at,     :type => Time
-    field :email,                   :type => String, :null => false
-    field :encrypted_password,      :type => String, :null => false
+    field :email,                   :type => String#, :null => false
+    field :encrypted_password,      :type => String#, :null => false
     field :authentication_token,    :type => String
     field :reset_password_token,    :type => String
     field :reset_password_sent_at,  :type => Time

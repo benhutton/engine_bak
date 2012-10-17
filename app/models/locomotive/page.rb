@@ -28,10 +28,9 @@ module Locomotive
     belongs_to :site, :class_name => 'Locomotive::Site'
 
     ## indexes ##
-    index :site_id
-    index :parent_id
-    index [[:fullpath, Mongo::ASCENDING], [:site_id, Mongo::ASCENDING]]
-
+    index({parent_id: 1})
+    index({fullpath: 1, site_id: 1})
+    
     ## callbacks ##
     after_initialize    :set_default_raw_template
     before_validation   :normalize_slug

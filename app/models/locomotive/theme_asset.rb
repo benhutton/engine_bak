@@ -22,6 +22,7 @@ module Locomotive
     index :site_id
     index [[:site_id, Mongo::ASCENDING], [:local_path, Mongo::ASCENDING]]
 
+    index({site_id: 1, local_path: 1})
     ## callbacks ##
     before_validation :check_for_folder_changes
     before_validation :store_plain_text
