@@ -7,7 +7,7 @@ module Locomotive
     field :role, :default => 'author'
 
     ## associations ##
-    referenced_in :account, :class_name => 'Locomotive::Account', :validate => false
+    belongs_to :account, :class_name => 'Locomotive::Account', :validate => false
     embedded_in   :site,    :class_name => 'Locomotive::Site',    :inverse_of => :memberships
 
     ## validations ##
@@ -19,7 +19,7 @@ module Locomotive
 
     ## methods ##
 
-    Ability::ROLES.each do |_role|
+    Locomotive::Ability::ROLES.each do |_role|
       define_method("#{_role}?") do
         self.role == _role
       end
