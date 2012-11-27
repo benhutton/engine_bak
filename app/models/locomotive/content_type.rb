@@ -32,7 +32,7 @@ module Locomotive
     end
 
     ## named scopes ##
-    scope :ordered, desc(:updated_at)
+    scope :ordered, order_by(:updated_at.desc)
 
     ## indexes ##
     index({ site_id: 1,slug: 1 })

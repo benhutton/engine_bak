@@ -23,7 +23,7 @@ module Locomotive
           after_save        :propagate_templatized
 
           ## scopes ##
-          scope :templatized, where: { templatized: true }
+          scope :templatized, where(:templatized => true)
 
           ## virtual attributes ##
           attr_accessor :content_entry
@@ -163,14 +163,12 @@ module Locomotive
 
           selector = { 'parent_ids' => { '$in' => [self._id] } }
           operations  = {
-            '$set' => {
               'templatized'             => self.templatized,
               'templatized_from_parent' => self.templatized,
               'target_klass_name'       => self.target_klass_name
-            }
           }
 
-          self.collection.update selector, operations, multi: true
+          self.collection.find(:parent_ids.in => [self._id]).update_all(operations)
         end
 
       end

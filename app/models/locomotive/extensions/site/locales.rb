@@ -8,7 +8,7 @@ module Locomotive
         included do
 
           ## fields ##
-          field :locales, :type => 'RawArray', :default => []
+          field :locales, :type => Array, :default => []
 
           ## validations ##
           validate :can_not_remove_default_locale
