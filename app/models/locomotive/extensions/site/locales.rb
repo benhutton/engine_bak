@@ -67,7 +67,7 @@ module Locomotive
         end
 
         def default_locale_was
-          self.locales_was.first || Locomotive.config.site_locales.first
+          self.locales_was.try(:first) || Locomotive.config.site_locales.first
         end
 
         def locale_fallbacks(locale)
@@ -100,7 +100,7 @@ module Locomotive
                 modifications['title'][locale]    = title
               end
 
-              page.collection.update({ :_id => page._id }, { '$set' => modifications })
+              page.collection.find({ :_id => page._id}).update_all(modifications)
             end
           end
         end
