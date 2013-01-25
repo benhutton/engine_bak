@@ -39,7 +39,7 @@ module ActionDispatch
 
         def find_session(id)
           id = Moped::BSON::ObjectId.from_string(id.to_s)
-          @@session_class.first(:conditions => { :_id => id }) ||
+          @@session_class.where(:_id => id).first  ||
             @@session_class.new(:id => id)
         end
 
@@ -53,7 +53,7 @@ module ActionDispatch
         end
 
         def destroy(env)
-          session = @@session_class.first(:conditions => { :_id => env[SESSION_RECORD_KEY].id })
+          session = @@session_class.where(:_id => env[SESSION_RECORD_KEY].id ).first
           session.try(:destroy)
 
           env[SESSION_RECORD_KEY] = nil
