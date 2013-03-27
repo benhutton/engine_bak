@@ -1,11 +1,7 @@
 #!/usr/bin/env bundle
 # encoding: utf-8
 
-<<<<<<< HEAD
 source "https://rubygems.org"
-=======
-source 'https://rubygems.org'
->>>>>>> Updating dependencies and commenting out migrations, since it needs to be updated for mongoid 3
 
 # net-scp 1.0.6 was yanked
 gem 'net-scp', '1.0.4'
