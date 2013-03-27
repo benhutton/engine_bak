@@ -1,7 +1,7 @@
 require 'mongoid'
 require 'mongoid/railtie'
 require 'mongoid/tree'
-require 'mongoid_migration'
+# require 'mongoid_migration'
 require 'mongo_session_store-rails3'
 require 'devise'
 require 'devise/orm/mongoid'

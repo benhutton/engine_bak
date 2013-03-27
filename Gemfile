@@ -1,7 +1,11 @@
 #!/usr/bin/env bundle
 # encoding: utf-8
 
+<<<<<<< HEAD
 source "https://rubygems.org"
+=======
+source 'https://rubygems.org'
+>>>>>>> Updating dependencies and commenting out migrations, since it needs to be updated for mongoid 3
 
 # net-scp 1.0.6 was yanked
 gem 'net-scp', '1.0.4'
@@ -15,14 +19,14 @@ group :assets do
   gem 'compass-rails'
 end
 # The rest of the dependencies are for use when in the locomotive development environment
-gem 'carrierwave-mongoid', :git => 'https://github.com/jnicklas/carrierwave-mongoid.git', :branch => 'mongoid-3.0'
 gem 'mongoid-tree', :git => 'git://github.com/benedikt/mongoid-tree', :require => 'mongoid/tree'
-gem 'custom_fields', :git => 'https://github.com/avaranovich/custom_fields.git', :branch => 'mongoid-3' # Branch on Github
+gem 'custom_fields', :git => 'https://github.com/jansegre/custom_fields.git', :branch => 'mongoid-3' # Branch on Github
 
 
 group :development do
   # gem 'custom_fields', :path => '../gems/custom_fields' # for Developers
-   gem 'custom_fields', :git => 'https://github.com/avaranovich/custom_fields.git', :branch => 'mongoid-3' # Branch on Github
+   gem 'custom_fields', :git => 'https://github.com/jansegre/custom_fields.git', :branch => 'mongoid-3' # Branch on Github
+end
 
 # The rest of the dependencies are for use when in the locomotive development / test environments
 
