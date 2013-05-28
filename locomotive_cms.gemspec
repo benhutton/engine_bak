@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongo_session_store-rails3'
   s.add_dependency 'bson_ext',                        '~> 1.7.0'
   s.add_dependency 'mongoid',                         '~> 3.0.5'
+  s.add_dependency 'mongoid-tree',                    '~> 1.0.1'
   # s.add_dependency 'locomotive-mongoid-tree',         '~> 0.6.2'
   # s.add_dependency 'locomotive-mongoid_migration'
 
