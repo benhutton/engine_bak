@@ -55,8 +55,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'highline',                        '~> 1.6.2'
   s.add_dependency 'stringex',                        '~> 1.5.1'
 
-  s.add_dependency 'carrierwave-mongoid',             '~> 0.4.0'
-  s.add_dependency 'fog',                             '~> 1.9.0'
+  s.add_dependency 'carrierwave-mongoid',             '~> 0.6.0'
+  s.add_dependency 'fog',                             '~> 1.11.1'
   s.add_dependency 'dragonfly',                       '~> 0.9.8'
   s.add_dependency 'rack-cache',                      '~> 1.1'
   s.add_dependency 'mimetype-fu',                     '~> 0.1.2'
